@@ -1,8 +1,10 @@
 .wrapper{
     display: flex;
-    /* justify-content <- 수평축에 있는(main-axis) flex children의 위치 변경 */
+    /* displat:flex의 default 값(row)을 column으로 변경
+    즉, justify-content는 수직축이 되고 align-items는 수평축이
+    된다. */
+    flex-direction: column;
     justify-content: space-around;
-    /* align-items <- 수직축에 있는(cross-axis) felx children의 위치 변경 */
     align-items:center;
     height: 100vh;
 }
