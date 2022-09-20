@@ -1,19 +1,36 @@
-.wrapper{
+.grid{
     display: grid;
-    /* column */
-    grid-template-columns: 250px 250px 250px;
-    /* row */
-    grid-template-rows: 60px 60px 60px;
-    /* space(여백) */
-    /* column-gap: 10px; */
-    /* row-gap: 10px; */
-    gap: 10px;
+    /* grid-template-columns: 200px 200px 200px 200px; */
+    /* repeat(반복할 수(컬럼 수), 크기) */
+    /* grid-template-columns: repeat(4, 200px); */
+    grid-template-columns: auto 200px;
+
+    /* grid-template-rows: 200px 200px 200px 200px; */
+    /* repeat(반복할 수(컬럼 수), 크기) */
+    /* grid-template-rows: repeat(4, 200px); */
+    grid-template-rows: 100px repeat(2,200px) 100px;
+    /* grid-template-areas <- layout 디자인 
+    즉, template 한눈에 보여준다.*/
+    grid-template-areas:
+    "header header header header" /* 첫 번째 row*/
+    "content content content nav" /* 두 번째 row*/
+    "content content content nav" /* 세 번째 row*/
+    "footer footer footer footer" /* 네 번째 row*/
 }
-.box{
-    flex-basis: 400px;
-    background-color: powderblue;
-    color: white;
-    font-size: 50px;
-    display: flex;
-    justify-content: center;
+.header{
+    background-color: #2ecc71;
+    /* grid-area <- template에서 어떤 영역인지 명시한다. */
+    grid-area:header;
+}
+.content{
+    background-color: #3498db;
+    grid-area: content;
+}
+.nav{
+    background-color: #8e44ad;
+    grid-area: nav;
+}
+.footer{
+    background-color: #f39c12;
+    grid-area: footer;
 }
