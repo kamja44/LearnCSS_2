@@ -2,21 +2,28 @@
     display: flex;
     justify-content: space-around;
     height: 100vh;
-    /* flex-direction: row-reverse; */
-    /* flex-direction: column-reverse; */
-    /* flex-wrap: wrap-reverse; */
-    /* flex-wrap: nowrap; */
-    /* 
-    flex-wrap <- element들은 같은 줄에 있어야 한다.
-    */
-    /* flex-wrap: wrap; */
-    /* 
-    element들의 크기(width)를 유지해라
-    */
+    
 }
 .box{
     width: 200px;
     height: 200px;
-    background-color: peru;
-    
+    background-color: peru;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+}
+.box:nth-child(2){
+    background-color: black;
+    /* flex-shrink: 2; */
+    /* 
+    flex-shrink
+    2번은 1번과 3번보다 2배 더 줄어든다.
+    */
+    /* flex-grow: 1; */
+    /* 
+    flex-grow
+    남는 여백만큼 커진다.
+    */
 }
