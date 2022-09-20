@@ -1,0 +1,19 @@
+.wrapper{
+    display: grid;
+    /* column */
+    grid-template-columns: 250px 250px 250px;
+    /* row */
+    grid-template-rows: 60px 60px 60px;
+    /* space(여백) */
+    /* column-gap: 10px; */
+    /* row-gap: 10px; */
+    gap: 10px;
+}
+.box{
+    flex-basis: 400px;
+    background-color: powderblue;
+    color: white;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+}
