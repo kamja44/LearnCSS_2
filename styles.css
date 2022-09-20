@@ -1,11 +1,6 @@
 .wrapper{
     display: flex;
-    /* displat:flex의 default 값(row)을 column으로 변경
-    즉, justify-content는 수직축이 되고 align-items는 수평축이
-    된다. */
-    flex-direction: column;
     justify-content: space-around;
-    align-items:center;
     height: 100vh;
 }
 .box{
@@ -13,4 +8,10 @@
     height: 200px;
     background-color: peru;
     color: powderblue;
+}
+.box:nth-child(2){
+    align-self: center;
+}
+.box:nth-child(3){
+    align-self: flex-end;
 }
