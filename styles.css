@@ -2,11 +2,14 @@
     display: flex;
     justify-content: space-around;
     height: 100vh;
-    
 }
 .box{
-    width: 200px;
-    height: 200px;
+    flex-basis: 300px;
+    /* 
+    flex-basis
+    element의 처음 크기를 지정한다.
+    */
+
     background-color: peru;   
     display: flex;
     justify-content: center;
@@ -16,14 +19,5 @@
 }
 .box:nth-child(2){
     background-color: black;
-    /* flex-shrink: 2; */
-    /* 
-    flex-shrink
-    2번은 1번과 3번보다 2배 더 줄어든다.
-    */
-    /* flex-grow: 1; */
-    /* 
-    flex-grow
-    남는 여백만큼 커진다.
-    */
+    flex-grow: 1;
 }
