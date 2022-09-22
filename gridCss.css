@@ -6,35 +6,25 @@
 }
 .header{
     background-color: #2ecc71;
-    /* 
-    grid-column-start, grid-column-end <- 1부터 시작한다.
-    숫자는 element가 아닌 element의 공백들을 의미한다.
-    즉, 1은 element의 왼쪽 공백부터 시작함을 의미한다.
-    */
-    grid-column-start: 1;
-    grid-column-end: 5;
+    grid-column: 1/-1;
 }
 .content{
     background-color: #3498db;
-    grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column: 1/-2;
     /* 
     grid-row-start, grid-row-end <- 1부터 시작한다.
     숫자는 element가 아닌 element의 공백들을 의미한다.
     즉, 1은 element의 위쪽 공백부터 시작함을 의미한다.
     */
-    grid-row-start: 2;
-    grid-row-end: 4;
+    grid-row: 2/ span 2;
 }
 .nav{
     background-color: #8e44ad;
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 4;
+    grid-column: 4/-1;
+    grid-row: 2/-2;
 }
 .footer{
     background-color: #f39c12;
-    grid-column-start: 1;
-    grid-column-end: 5;
+    /* span <- element를 몇 개 갖는지 */
+    grid-column: span 4;
 }
