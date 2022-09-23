@@ -1,14 +1,19 @@
 .grid{
     display: grid;
-    gap: 10px;
-    height: 50vh;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4,1fr);
-    justify-items: stretch;
-    align-items: center;
+    gap: 5px;
+    height: 150vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4,100px);
     /* 
-    place-items : 수직(align-items) 수평(justify-items);
-    */
+        items <- 1 element, content <- all element
+        즉, justify-content, align-content <- grid를 움직인다.
+     */
+     /* justify-content: space-between; */
+     background-color: powderblue;
+     /* align-content: space-between; */
+    /* place-content : 수직 수평 */
+    place-content: end center ;
+
 }
 .header{
     background-color: #2ecc71;
