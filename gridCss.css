@@ -2,23 +2,13 @@
     display: grid;
     gap: 5px;
     height: 50vh;
-    grid-template-columns: repeat(4, 100px);
+    /* 
+        minmax(최소, 최대)
+        grid의 element들이 최소.최대 크기를 가진다.
+    */
+    grid-template-columns: repeat(10, minmax(100px, 1fr));
     grid-template-rows: repeat(4,100px);
-    /* 
-        grid-auto-row, grid-auto-columns
-        grid에 설정한 element보다 더 많은 element가 생길경우
-        default value로 자동으로 row, column를 생성한다.
-    */
-    /* grid-auto-rows: 100px; */
-    /* 
-        grid-auto-flow:column
-        row의 수보다 더 많은 div가 있을 때 마다
-        일어나는 일은 더 많은 div를 만들어내기보다 더 많은
-        column을 만든다.
-    */
-    grid-auto-flow: column;
-    grid-auto-columns: 100px;
-}
+    }
 .item:nth-child(odd){
     background-color: #2ecc71;
 }
