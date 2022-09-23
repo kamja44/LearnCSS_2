@@ -1,17 +1,27 @@
-.grid{
+.grid {
+    color: white;
     display: grid;
     gap: 5px;
-    height: 50vh;
-    /* 
-        minmax(최소, 최대)
-        grid의 element들이 최소.최대 크기를 가진다.
-    */
-    grid-template-columns: repeat(10, minmax(100px, 1fr));
-    grid-template-rows: repeat(4,100px);
-    }
-.item:nth-child(odd){
+    grid-auto-rows: 100px;
+    margin-bottom: 30px;
+  }
+  .item:nth-child(odd) {
     background-color: #2ecc71;
-}
-.item:nth-child(even){
+  }
+  .item:nth-child(even) {
     background-color: #3498db;
+  }
+.grid:first-child{
+    /* auto-fill <- 최대한 많은 element들을 만든다.
+        새로운 element생성 시 기존에 만들었던 공간에
+        element를 할당한다.
+    */
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+.grid:last-child{
+    /* auto-fit <- 현재의 element들의 크기를 늘려서 주어진 크기에 맞춘다.
+        새로운 element생성 시 기존 element들의 크기를 줄여
+        남은 공간에 element를 할당한다.
+    */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
